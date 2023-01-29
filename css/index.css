@@ -1,0 +1,82 @@
+@charset "utf-8";
+*{
+margin: 0; padding: 0;
+font-family: 'NanumSquare';
+}
+a{color: #000; text-decoration: none;}
+ul{list-style: none;}
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+body{
+    overflow: hidden !important;
+    background: url(../img/portfolio-main1920.png);
+}
+
+.header{
+    width: 100%;
+}
+.header .header-wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 59px 0;
+    justify-content: space-between;
+    z-index: 100;
+    position: relative; 
+}
+.header .header-wrap .nav{
+    display: flex;
+    align-items: center;
+    flex-basis: 36%;
+    z-index: 100;
+}
+.header .header-wrap .nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.header .header-wrap .nav ul li{
+    position: relative;
+}
+
+.header .header-wrap .nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 0%;    
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+.header .header-wrap .nav ul li:hover::after{
+    width: 100%;
+}
+.header .header-wrap .nav ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;   
+    font-size: 17px;
+}
+.header .header-wrap .nav ul li a:hover{
+    font-weight: 900;
+}
+.obj{
+    width: 130%;
+    height: 922px;
+    /* background-color: yellow; */
+
+
+}
+.obj .obj-item{
+    height: 960px;
+    position: relative;
+    top: -110px;
+    left: -240px;
+    background: url(../img/main-obj.png) no-repeat;
+    background-position: center top;
+    animation:ani 2s infinite alternate;    
+}
+@keyframes ani{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(0,14px);}
+}  
